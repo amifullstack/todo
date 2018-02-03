@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "build-dev": "webpack --config webpack.config.js --progress --profile --colors"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +14,9 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "ejs": "^2.5.7",
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",

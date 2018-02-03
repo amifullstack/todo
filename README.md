@@ -51,6 +51,6 @@ Save Close file
 
 In VS Code `ctrl + x` serach ESLint install it - Reload it *Restart it.
 
-Part 1 is Done.
 
-Click here for Next or change branch to Part2
+
+Kind of working.. Check out the Part2 branch for good config.
