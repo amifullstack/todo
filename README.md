@@ -54,3 +54,30 @@ In VS Code `ctrl + x` serach ESLint install it - Reload it *Restart it.
 Part 1 is Done.
 
 Click here for Next or change branch to Part2
+
+Part2:
+
+We made lot a changes in the project.
+
+1. Project structure
+
+        Root
+        |
+        |___public
+        |       |__js
+        |           |__build.js
+        |
+        |___src
+        |     |___Components
+        |     |      |___TestComponent
+        |     |                     |___TestComponent.js and css
+        |     |___index.js
+        |
+        |___views
+        |       |___index.html
+
+2. webpack.config.js
+
+3. Our first ever React component and learned little bit about props.
+
+    In the next part we will configure wepack hot reloading.

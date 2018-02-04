@@ -5,9 +5,9 @@ const PORT = 5000;
 
 const app = express();
 
-app.use(express.static('./dist'));
+app.use(express.static('./public'));
 app.use('/', (req, res) => {
-  res.sendFile(path.resolve('client/index.html'));
+  res.sendFile(path.resolve('views/index.html'));
 });
 
 app.listen(PORT, () => {
