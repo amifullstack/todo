@@ -1,8 +1,23 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 import TestComponent from './Components/TestComponent/TestComponent';
 
-render(
-  <TestComponent name="TODO" count={12345} showCount />,
-  document.querySelector('#react-app'),
-);
+const renderApp = (Component) => {
+  render(
+    <AppContainer>
+      <Component name="TODO" count={123456789} showCount />
+    </AppContainer>,
+    document.querySelector('#react-app'),
+  );
+};
+
+renderApp(TestComponent);
+
+// Check hot reloading is enabled in our webpack-build and initialise top-level component if it is.
+
+if (module && module.hot) {
+  module.hot.accept('./Components/TestComponent/TestComponent', () => {    
+    renderApp(TestComponent);
+  })
+}

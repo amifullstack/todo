@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon server",
+    "server-w": "webpack-dev-server",
     "build-dev": "webpack --config webpack.config.js --progress --profile --colors"
   },
   "author": "",
@@ -25,6 +26,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0-beta.20",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   }

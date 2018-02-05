@@ -81,3 +81,30 @@ We made lot a changes in the project.
 3. Our first ever React component and learned little bit about props.
 
     In the next part we will configure wepack hot reloading.
+
+Part 3:
+1. $`npm i -S webpack-dev-server react-hot-loader`
+2. Add react-hot-loader to `.babelrc` like below
+
+        {
+            "presets": ["es2017", "react"],
+            "plugins": ["react-hot-loader/babel"]
+        }
+3. Let's make that for webpack.config.js as well, take a look at that file.
+4. Change build.js file path in `views/index.html` because we are using react-hot-loader and that running on port 8080.
+
+        like this
+        http://localhost:8080/js/build.js
+
+5. Enable hot loading in main file that's `src/index.js`
+6. Create script to run `devServer` in package.json
+        "server-w": "webpack-dev-server"
+        Next run webpack-dev-server in different terminal
+        npm run server-w
+        Good to goo.
+        Now buld.js is serverd from different server on port 8080/8081
+        check file if curious http://localhost:8080/js/build.js
+        
+7. 
+
+        

@@ -1,12 +1,23 @@
-const path = require('path');
+const { resolve } = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: {
-    'js/build.js': './src/index.js',
-  },
+  context: resolve(__dirname, 'src'),
+  entry: [
+    'react-hot-loader/patch', // RHL path
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+    './index.js', // app entry point
+  ],
   output: {
-    filename: '[name]',
-    path: path.join(__dirname, 'public'),
+    filename: 'build.js',
+    path: resolve(__dirname, 'public', 'js'),
+    publicPath: '/js',
+  },
+  devServer: {
+    hot: true,
+    contentBase: resolve(__dirname, ''), // same as our app base path
+    publicPath: '/js', // Now build file at localhost:8080/js/
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -16,8 +27,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components|public\/)/,
-        loader: 'babel-loader',
+        loader: ['babel-loader'],
       },
     ],
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+  ],
 };
