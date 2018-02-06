@@ -113,4 +113,15 @@ Part 3:
 
         Check out the router stuff on commit `react-router-dom`
 
-        
+9. Part 5: Fix Webpack issue not hot reloading
+
+        npm i -S webpack-dev-middleware webpack-hot-middleware
+
+        Edited webpack config file, Note: We removed devserver completely, that will handle
+        by express server.
+
+        Check out the modification made on webpack config file.
+
+10. Now we need to add `webapck-hot-middleware` and all to `server` check out.
+
+11. We are not using `http://localhost:8080` any more remove it in `views/index.html`

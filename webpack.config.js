@@ -1,23 +1,19 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 
+
 module.exports = {
   context: resolve(__dirname, 'src'),
   entry: [
     'react-hot-loader/patch', // RHL path
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
+    'react-hot-loader/babel',
+    'webpack-hot-middleware/client',
     './index.js', // app entry point
   ],
   output: {
     filename: 'build.js',
-    path: resolve(__dirname, 'public', 'js'),
+    path: '/',
     publicPath: '/js',
-  },
-  devServer: {
-    hot: true,
-    contentBase: resolve(__dirname, ''), // same as our app base path
-    publicPath: '/js', // Now build file at localhost:8080/js/
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -34,5 +30,6 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
 };

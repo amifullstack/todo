@@ -7,7 +7,7 @@ const HomePage = () => {
     <section className="page-content">
       <div className="row">
         <div className="col-sm-12 col-lg-8">
-          This is the Home Page
+          This is the Home Page.
         </div>
         <aside className="col-sm-12 col-lg-8">
           This is HomePage the sidebar.
