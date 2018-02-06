@@ -105,6 +105,7 @@ Part 3:
         Now buld.js is serverd from different server on port 8080/8081
         check file if curious http://localhost:8080/js/build.js
         
-7. 
+7. Part 4: Bild some components check out `Components/`
+
 
         

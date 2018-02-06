@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import TestComponent from './Components/TestComponent/TestComponent';
+import Template from './Components/Template/Template';
 
 const renderApp = (Component) => {
   render(
@@ -12,12 +13,12 @@ const renderApp = (Component) => {
   );
 };
 
-renderApp(TestComponent);
+renderApp(Template);
 
 // Check hot reloading is enabled in our webpack-build and initialise top-level component if it is.
 
 if (module && module.hot) {
-  module.hot.accept('./Components/TestComponent/TestComponent', () => {    
+  module.hot.accept('./Components/Template/Template', () => {    
     renderApp(TestComponent);
   })
 }
