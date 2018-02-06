@@ -107,5 +107,10 @@ Part 3:
         
 7. Part 4: Bild some components check out `Components/`
 
+8.  Routing a frontend routing.
+
+        npm i -S react-router-dom
+
+        Check out the router stuff on commit `react-router-dom`
 
         
